@@ -4,7 +4,7 @@ import css from "./App.module.css"
 import CafeInfo from "../CafeInfo/CafeInfo.tsx";
 import VoteOptions from "../VoteOptions/VoteOptions.tsx";
 import VoteStats from "../VoteStats/VoteStats.tsx";
-import type {VotesType, Votes} from "../../types/votes.ts";
+import type {VoteType, Votes} from "../../types/votes.ts";
 import Notification from "../Notification/Notification.tsx";
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
       bad: 0
   })
 
-  function handleVote(type: VotesType) {
+  function handleVote(type: VoteType) {
       setVotes({
           ...votes,
           [type]: votes[type] + 1,
